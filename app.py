@@ -9,7 +9,16 @@ app = Flask(__name__)
 def main():
     return jsonify({
             'name': 'Kalilou',
-            'lastname': 'Diaby'
+            'lastname': 'Diaby',
+            'age': 28,
+            'tutorial': 'tetsing ansible'
+        })
+
+@app.route("/health")
+def health():
+    return jsonify({
+        'status': '200',
+        'message': 'Application up and running'
         })
 
 if __name__ == '__main__':
